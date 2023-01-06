@@ -17,7 +17,68 @@
     color: #fff;
     background: #0257A4;
 }
+
+.default-button--bordered {
+    border-color: var(--theme__color1);
+    color: var(--theme__color1);
+    background: transparent;
+}
+.default-button--bordered:hover {
+    background: var(--theme__color1);
+    color: #fff;
+}
+
+.default-button--bordered--theme2 {
+    border-color: var(--theme__color2);
+    color: var(--theme__color2);
+    background: transparent;
+}
+.default-button--bordered--theme2:hover {
+    background: var(--theme__color2);
+    color: #fff;
+}
+
+.default-button--bordered--white {
+    border-color: #fff;
+    color: #fff;
+    background: transparent;
+}
+.default-button--bordered--white:hover {
+    background: #fff;
+    color: var(--theme__color1);
+}
 /* buttons-end */
+
+/* -checkbox-round- */
+.checkbox-round {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    font-size: 14px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox-round::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 1px solid #22345B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: inherit;
+    transition: 0.3s;
+}
+.checkbox-round:checked::before {
+    border-width: 3px;
+}
 
 /* small-tools */
 .underline {

@@ -25,9 +25,11 @@
   });
 
   // owl-carousel
-  $(".brand-active").owlCarousel({
+  $(".testimonial-slider-active").owlCarousel({
     loop: true,
-    margin: 50,
+    margin: 16,
+    items: 2,
+    dotsEach: 1,
     responsiveClass: true,
     nav: false,
     navText: [
@@ -35,19 +37,28 @@
       '<span class="fas fa-chevron-right fa-2x"></span>',
     ],
     responsive: {
-      0: {
-        items: 1,
-        nav: false,
-      },
-      600: {
-        items: 3,
-        nav: false,
-      },
-      1000: {
-        items: 4,
-        nav: false,
-        loop: false,
-      },
+      0: {},
+      600: {},
+      1000: {},
+    },
+  });
+
+  // owl-carousel
+  $(".design-slider-active").owlCarousel({
+    loop: true,
+    margin: 0,
+    items: 1,
+    dotsEach: 1,
+    responsiveClass: true,
+    nav: false,
+    navText: [
+      '<span class="fas fa-chevron-left fa-2x"></span>',
+      '<span class="fas fa-chevron-right fa-2x"></span>',
+    ],
+    responsive: {
+      0: {},
+      600: {},
+      1000: {},
     },
   });
 })(jQuery);
