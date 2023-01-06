@@ -219,6 +219,13 @@
         gap: 10px;
         border-radius: 6px;
     }
+    .faq-single_collapsed__inner p {
+        font-size: 15px;
+    }
+    .faq-single_collapsed__inner {
+        padding: 15px 17px;
+        min-height: 140px;
+    }
     .single-faq {
         margin-bottom: 22px;
     }
