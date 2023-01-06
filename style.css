@@ -223,6 +223,9 @@ p:last-child{
 .offcanvas-open {
   font-size: 22px;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .offcanvas-open:hover {
   color: #97A3AE;
@@ -231,8 +234,10 @@ p:last-child{
   color: var(--theme__color1);
   position: absolute;
   transition: 0.3s;
-  right: 25px;
-  top: 25px;
+  right: 15px;
+  top: 15px;
+  font-size: 22px;
+  line-height: 1;
 }
 .offcanvas-close:hover {
   color: #97A3AE;
@@ -255,7 +260,7 @@ p:last-child{
   min-width: 200px;
   z-index: 5;
   position: relative;
-  background: #d5dce2;
+  background: #fff;
   height: 100%;
   padding: 50px 20px 40px;
   overflow: auto;
@@ -265,12 +270,23 @@ p:last-child{
 .offcanvas-menu .offmenu :-webkit-scrollbar {
   display: none;
 }
-.offcanvas-menu ul li a {
+.mobile-menu > li > a {
   display: block;
-  text-align: center;
   font-size: 16px;
   color: var(--theme__color1);
-  padding: 10px;
+  padding: 7px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-menu > li > a .chevron {
+  font-size: 11px;
+}
+.mobile-menu > li .dropdown-menu.show {
+  position: static !important;
+  width: calc(100% - 0px);
+  transform: none !important;
 }
 .dropdown-menu-custom ul {
   background: #fff;
@@ -1026,6 +1042,8 @@ p:last-child{
 .fl-menu {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .fl-menu li {
   font-weight: 700;

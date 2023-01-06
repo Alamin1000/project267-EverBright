@@ -29,29 +29,42 @@
     <div class="main-wrap">
       <!-- offcanvas-start -->
       <div class="offcanvas-menu">
-        <ul class="offmenu" id="menuParent">
-          <a href="#" class="offcanvas-close"><i class="fa fa-times"></i></a>
-          <li class="active"><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li class="dropdown">
-            <a href="#" data-bs-toggle="collapse" data-bs-target="#drop-menu1"
-              >OUR HORSES</a
-            >
-            <div
-              class="dropdown-menu-custom collapse"
-              id="drop-menu1"
-              data-bs-parent="#menuParent"
-            >
-              <ul>
-                <li><a href="#">YEARLINGS</a></li>
-                <li><a href="#">2 YEAR OLDS</a></li>
-                <li><a href="#">3 YEAR OLD PLUS</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">LATEST NEWS</a></li>
-          <li><a href="#">CONTACT & FIND US</a></li>
-        </ul>
+        <div class="offmenu" id="menuParent">
+          <a href="#" class="offcanvas-close"><i class="fal fa-times"></i></a>
+          <ul class="mobile-menu">
+            <li>
+              <a href="#" class="dropdown" data-bs-toggle="dropdown">
+                <span class="txt">Login</span>
+                <i class="fas fa-chevron-down chevron"></i>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Solar By State</a></li>
+            <li>
+              <a href="#" class="dropdown" data-bs-toggle="dropdown">
+                <span class="txt">About Us</span>
+                <i class="fas fa-chevron-down chevron"></i>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                  <li><a href="#">Lorem ipsum</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+          <a href="#" class="button default-button mt-3">Get a Free Proposal</a>
+        </div>
       </div>
       <div class="offcanvas-overlay"></div>
       <!-- offcanvas-start-end -->
@@ -61,10 +74,10 @@
         <div class="header_in">
           <div class="container">
             <div class="header-section__inner">
-              <a href="index.html" class="header-logo">
+              <a href="index.html" class="header__logo">
                 <img src="images/logo.svg" alt="" />
               </a>
-              <div class="main-menu">
+              <div class="main-menu d-xl-block d-none">
                 <ul>
                   <li><a href="#">Solar By State</a></li>
                   <li>
@@ -86,7 +99,7 @@
                   <li><a href="#">Partners</a></li>
                 </ul>
               </div>
-              <div class="header-right">
+              <div class="header-right d-xl-flex d-none">
                 <div class="dropdown">
                   <a href="#" class="hdr-r-a" data-bs-toggle="dropdown">
                     <span class="txt">Login </span>
@@ -103,6 +116,9 @@
                   >Get a Free Proposal</a
                 >
               </div>
+              <a href="#" class="offcanvas-open d-xl-none">
+                <img src="images/menu_ic.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
@@ -117,9 +133,15 @@
             <div class="hero-section__inner">
               <div class="hero__content">
                 <h1 class="h1">
-                  The future of the clean energy home has arrived.
+                  The future of the clean energy
+                  <div class="d-xl-none d-block"></div>
+                  home has arrived.
                 </h1>
-                <p>Design | Quote | Financing | Installation | Support</p>
+                <p>
+                  Design | Quote | Financing |
+                  <br class="d-md-none d-block" />
+                  Installation | Support
+                </p>
               </div>
             </div>
           </div>
@@ -390,8 +412,8 @@
 
           <div class="ss__features_outer">
             <div class="container">
-              <div class="ss__features row">
-                <div class="col-lg-4 col-md-6">
+              <div class="ss__features row justify-content-center gy-3">
+                <div class="col-xl-4 col-md-6">
                   <div class="ss__feature_card">
                     <div class="ss__feature_card__icon">
                       <img src="images/ss__feature_card__icon-1.svg" alt="" />
@@ -405,7 +427,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-xl-4 col-md-6">
                   <div class="ss__feature_card">
                     <div class="ss__feature_card__icon">
                       <img src="images/ss__feature_card__icon-2.svg" alt="" />
@@ -419,7 +441,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-xl-4 col-md-6">
                   <div class="ss__feature_card">
                     <div class="ss__feature_card__icon">
                       <img src="images/ss__feature_card__icon-3.svg" alt="" />
@@ -447,7 +469,11 @@
                 class="faq-section__title sec-title cont-blk cont-blk--center"
               >
                 <h4 class="h4">FAQs</h4>
-                <h2>Find answers to some of your questions.</h2>
+                <h2>
+                  Find answers to some of
+                  <br class="d-sm-none d-block" />
+                  your questions.
+                </h2>
               </div>
 
               <div class="faqs-wrap" id="faq-parent">
@@ -577,11 +603,15 @@
                 class="article-section__title sec-title cont-blk cont-blk--center"
               >
                 <h4 class="h4">EVERBRIGHT BLOG</h4>
-                <h2>All our latest articles. All in one place.</h2>
+                <h2>
+                  All our latest articles.
+                  <br class="d-sm-none d-block" />
+                  All in one place.
+                </h2>
               </div>
 
-              <div class="articles__container row">
-                <div class="col-lg-4 col-md-6">
+              <div class="articles__container row gy-3">
+                <div class="col-xl-4 col-md-6">
                   <div class="article-single">
                     <div class="article__single__image">
                       <img src="images/article-1.png" alt="" />
@@ -603,7 +633,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-xl-4 col-md-6">
                   <div class="article-single">
                     <div class="article__single__image">
                       <img src="images/article-2.png" alt="" />
@@ -625,7 +655,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 d-xl-block d-sm-none d-block">
                   <div class="article-single">
                     <div class="article__single__image">
                       <img src="images/article-3.png" alt="" />
@@ -765,7 +795,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <div class="single-input-x">
+                      <div class="single-input-x contact-form__m-rndwer">
                         <label class="label-x"
                           >Do you rent or own your home?*
                         </label>
@@ -791,7 +821,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <div class="single-input-x">
+                      <div class="single-input-x contact-form__m-rfhgr">
                         <button
                           class="default-button submit-button submit-button-x contact-submit-button"
                         >
@@ -800,13 +830,15 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <p>
-                        <i
-                          >Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.</i
-                        >
-                      </p>
+                      <div class="contact-form__m-wber">
+                        <p>
+                          <i
+                            >Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</i
+                          >
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -819,7 +851,7 @@
         <!-- cta-section -->
         <section class="cta-section">
           <div class="cta-card_wrapper row g-0">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-xl-4">
               <div class="cta-card cta-card--dark">
                 <div class="cta-card__inner">
                   <h3>Partner Support</h3>
@@ -849,7 +881,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-xl-4">
               <div class="cta-card">
                 <div class="cta-card__inner">
                   <h3>Homeowner Support</h3>
@@ -879,7 +911,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-xl-4">
               <div class="cta-card cta-card--ass">
                 <div class="cta-card__inner">
                   <h3>Support Hours</h3>
