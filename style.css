@@ -136,6 +136,10 @@ p:last-child{
 .header_in {
   padding: 24px 0;
   background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .header-section__inner {
   gap: 20px;
@@ -169,9 +173,26 @@ p:last-child{
   display: flex;
   align-items: center;
   gap: 8px;
+  position: relative;
 }
 .main-menu > ul > li > a:hover {
   color: var(--theme__color1);
+}
+.main-menu > ul > li > a::after {
+  content: '';
+  height: 2px;
+  width: calc(100% + 14px);
+  bottom: -6px;
+  left: 50%;
+  transform: translate(-50%,0);
+  position: absolute;
+  display: block;
+  background: var(--theme__color2);
+  opacity: 0;
+  transition: 0.3s;
+}
+.main-menu > ul > li > a:hover:after {
+  opacity: 1;
 }
 .main-menu > ul > li > a > .chevron {
   font-size: 10px;
@@ -595,12 +616,18 @@ p:last-child{
 .design-slider {
 
 }
+.design-slider .owl-nav {
+  --arr-offset: 45px;
+}
+.design-slider .owl-nav .owl-prev {
+  display: none;
+}
 .design-slide {
   display: flex;
 }
 .design-slide__left {
   padding: 70px 90px 70px 70px;
-  width: calc(50% - 210px);
+  width: calc(50% - 140px);
   background: var(--theme__color2);
   display: flex;
   align-items: center;
@@ -619,6 +646,43 @@ p:last-child{
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.slider-arrow-1 .owl-nav {
+  gap: 20px;
+  display: flex;
+}
+.slider-arrow-1 .owl-nav button {
+  font-size: 10px !important;
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-align: center;
+  background: #fff !important;
+  outline: 8px solid rgba(0, 110, 200, 0.3);
+  border-radius: 50%;
+  color: var(--theme__color1) !important;
+  transition: 0.3s;
+}
+.slider-arrow-1 .owl-nav button:hover {
+  outline: 8px solid rgba(0, 110, 200,0.6);
+}
+.slider-arrow-center {
+  --arr-offset: 20px;
+}
+.slider-arrow-center .owl-prev,
+.slider-arrow-center .owl-next {
+  position: absolute;
+  top: 50%;
+  left: var(--arr-offset);
+  transform: translate(0,-50%);
+}
+.slider-arrow-center .owl-next {
+  right: var(--arr-offset);
+  left: unset;
 }
 /* ---design-section---end */
 

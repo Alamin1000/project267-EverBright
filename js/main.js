@@ -1,6 +1,21 @@
 (function ($) {
   "use strict";
 
+  var wind = $(window);
+  var sticky = $("#sticky-header");
+  wind.on("scroll", function () {
+    var scroll = wind.scrollTop();
+    if (scroll < 5) {
+      sticky.removeClass("sticky");
+    } else {
+      sticky.addClass("sticky");
+    }
+  });
+  $(window).on("load resize", function () {
+    $(".header-section").height($(".header_in").outerHeight());
+    $("body").css("--header-height", $(".header_in").outerHeight() + "px");
+  });
+
   // offcanvas-js
   $(".offcanvas-open").click(function () {
     $(".offcanvas-menu").addClass("active");
@@ -50,16 +65,28 @@
     items: 1,
     dotsEach: 1,
     responsiveClass: true,
-    nav: false,
+    nav: true,
+    URLhashListener: true,
+    autoplayHoverPause: true,
+    startPosition: "URLHash",
     navText: [
-      '<span class="fas fa-chevron-left fa-2x"></span>',
-      '<span class="fas fa-chevron-right fa-2x"></span>',
+      '<span class="far fa-chevron-left fa-2x"></span>',
+      '<span class="far fa-chevron-right fa-2x"></span>',
     ],
     responsive: {
       0: {},
       600: {},
       1000: {},
     },
+  });
+  let dsSlNv = document.querySelectorAll("#design-slider__nav li a");
+  dsSlNv.forEach((item) => {
+    item.addEventListener("click", function (event) {
+      dsSlNv.forEach((item) => {
+        item.classList.remove("active");
+      });
+      item.classList.add("active");
+    });
   });
 })(jQuery);
 

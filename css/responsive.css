@@ -1,4 +1,8 @@
-
+@media (max-width: 1599px) {
+    .design-slide__left {
+        width: calc(50% - 50px);
+    }
+}
 
 @media (max-width: 1399px) {
     .hero-section {
