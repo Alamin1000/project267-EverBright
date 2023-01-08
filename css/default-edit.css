@@ -77,7 +77,7 @@
     transition: 0.3s;
 }
 .checkbox-round:checked::before {
-    border-width: 3px;
+    border-width: 4px;
 }
 
 /* small-tools */

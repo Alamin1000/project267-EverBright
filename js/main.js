@@ -67,6 +67,7 @@
     dotsEach: 1,
     responsiveClass: true,
     nav: true,
+    dots: false,
     URLhashListener: true,
     autoplayHoverPause: true,
     startPosition: "URLHash",
