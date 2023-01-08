@@ -165,7 +165,9 @@
 
 
 @media (max-width: 991px) {
- 
+    .sf__nav {
+        display: none;
+    }
 }
 
 
@@ -188,9 +190,7 @@
     .h2 {
         font-size: 24px;
     }
-    .sf__nav {
-        display: none;
-    }
+    
     .sf-section__title {
         margin: 0;
     }
