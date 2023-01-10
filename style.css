@@ -581,7 +581,7 @@ p:last-child{
 }
 .slider-dots1 .owl-dot{
   background: #DBDBDB !important;
-  border: 4px solid transparent !important;
+  border: 5px solid transparent !important;
   height: 18px;
   width: 18px;
   border-radius: 50%;

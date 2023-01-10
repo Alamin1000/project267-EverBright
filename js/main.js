@@ -76,8 +76,12 @@
       '<span class="far fa-chevron-right fa-2x"></span>',
     ],
     responsive: {
-      0: {},
-      600: {},
+      0: {
+        dots: true,
+        nav: false,
+        autoplay: true,
+      },
+      991: {},
       1000: {},
     },
   });
