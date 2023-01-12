@@ -44,6 +44,18 @@
     .article-section__inner {
         padding: 0;
     }
+
+
+    .prt-hero {
+        padding: 120px 0 110px;
+    }
+    .platform-section__inner {
+        padding: 0;
+    }
+
+    .project-manage__single {
+        padding: 50px 40px 40px;
+    }
 }
 
 
@@ -166,6 +178,11 @@
         min-height: 598px;
         background: url('../images/hero-img-tablet.png') no-repeat center center/cover;
     }
+
+
+    .platform__op-row__cont-blk {
+        padding: 30px;
+    }
 }
 
 
@@ -203,6 +220,24 @@
     }
     .sf-section__title {
         margin: 0;
+    }
+
+    .platform__op-row {
+        flex-wrap: wrap;
+    }
+    .platform__op-row__image-blk {
+        width: 100%;
+    }
+    .platform__op-row__cont-blk {
+        padding: 65px;
+        width: 100%;
+    }
+    .platform__op-row:nth-child(2n) .platform__op-row__cont-blk {
+        order: 1;
+    }
+
+    .project-manage__wrapper {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -366,6 +401,32 @@
     }
     .footer__top {
         padding: 45px 0 5px;
+    }
+
+
+    .prt-hero {
+        padding: 60px 0 60px;
+    }
+
+    .inst-testimonial-section {
+        padding: 50px 0;
+    }
+    .inst-testimonial__video {
+        margin-bottom: 22px;
+        height: 220px;
+        border-radius: 5px;
+    }
+
+    .platform-section {
+        padding: 50px 0;
+    }
+    .platform__op-row__cont-blk {
+        padding: 25px 0;
+    }
+    .project-manage__wrapper {
+        grid-template-columns: repeat(1,1fr);
+        max-width: 280px;
+        margin: 0 auto;
     }
 }
 

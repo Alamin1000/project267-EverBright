@@ -59,6 +59,25 @@
   });
 
   // owl-carousel
+  $(".inst--testimonial-slider-active").owlCarousel({
+    loop: true,
+    margin: 16,
+    items: 3,
+    dotsEach: 1,
+    responsiveClass: true,
+    nav: false,
+    navText: [
+      '<span class="fas fa-chevron-left fa-2x"></span>',
+      '<span class="fas fa-chevron-right fa-2x"></span>',
+    ],
+    responsive: {
+      0: { items: 1 },
+      576: { items: 2 },
+      1000: { items: 3 },
+    },
+  });
+
+  // owl-carousel
   var designSlider = $(".design-slider-active");
   designSlider.owlCarousel({
     loop: true,
